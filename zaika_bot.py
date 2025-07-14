@@ -1,8 +1,13 @@
 # Zaika BBQ Grill AI Assistant
 import anthropic
+import os
+from dotenv import load_dotenv
 
-# Initialize Claude with your API key
-client = anthropic.Anthropic(api_key="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")
+# Load environment variables
+load_dotenv()
+
+# Initialize Claude with API key from environment variable
+client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
 def answer_restaurant_question(question):
     """
