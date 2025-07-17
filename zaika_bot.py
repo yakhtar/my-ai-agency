@@ -499,13 +499,13 @@ Even our most devoted carnivores order this. Slow-simmered for hours until it's 
 
 What type of flavors usually excite your palate? I'd love to personalize this further! 😊"""
 
-    def _handle_dietary_inquiry(self, query: str, tags: List[str] = None) -> str:
+    def _handle_dietary_inquiry(self, query: str, tags: Optional[List[str]] = None) -> str:
         """Handle dietary and preference-based inquiries with context awareness and clarification."""
         tags = tags or []
         menu = self.menu_data
-        matched_dishes = []
         weather = self.get_current_weather()
         time_of_day = self.get_time_of_day()
+        
         # Add weather/time/season tags
         if weather['season'] not in tags:
             tags.append(weather['season'])
@@ -513,6 +513,93 @@ What type of flavors usually excite your palate? I'd love to personalize this fu
             tags.append(weather['condition'])
         if time_of_day not in tags:
             tags.append(time_of_day)
+        
+        # Check for specific beverage queries
+        if any(word in query.lower() for word in ['beverage', 'drink', 'drinks', 'lassi', 'chai', 'tea', 'juice', 'soda', 'beverages']):
+            return """🍹 **Our Refreshing Beverages:**
+
+**🥭 Mango Lassi** - $5.25
+Creamy yogurt drink blended with sweet mango - our Instagram star! Perfect for cooling down after spicy dishes.
+
+**🌸 Kashmiri Chai** - $4.20  
+Pink tea from the Kashmir valley - delicate, aromatic, and Instagram-worthy. A traditional welcome drink.
+
+**🥛 Sweet Lassi** - $4.20
+Classic yogurt drink - natural spice neutralizer and digestive aid.
+
+**☕ Masala Chai** - $3.15
+Spiced Indian tea with warming ginger and cardamom.
+
+**Perfect for:** Cooling down spicy dishes, refreshing on hot days, or as a traditional accompaniment to any meal!"""
+        
+        # Check for specific salad queries
+        if any(word in query.lower() for word in ['salad', 'salads', 'fresh', 'greens', 'vegetables', 'healthy']):
+            return """🥗 **Fresh & Healthy Options:**
+
+**🥬 Palak Paneer** - $12.60
+Fresh spinach curry with soft paneer cubes - nutrition meets indulgence! Rich in iron and plant-based protein.
+
+**🥒 Fresh Cucumber Raita** - $3.15
+Cooling yogurt with fresh cucumber - perfect side dish and spice neutralizer.
+
+**🌿 Mint Chutney** - $2.10
+Fresh mint and cilantro chutney - cooling AND flavorful, even kids love it as a dip!
+
+**Perfect for:** Light meals, cooling down spicy dishes, or adding fresh elements to your meal!"""
+        
+        # Check for specific vegetarian queries
+        if any(word in query.lower() for word in ['vegetarian', 'veg', 'vegan', 'plant-based', 'vegetarian menu', 'complete vegetarian']):
+            return """🌱 **Our Vegetarian Favorites:**
+
+**🥬 Palak Paneer** - $12.60
+Fresh spinach curry with soft paneer cubes - nutrition meets indulgence! Rich in iron and plant-based protein.
+
+**🫘 Lahori Channa** - $12.60
+Chickpeas in robust tomato-onion gravy with warming Lahori spices. High fiber, plant protein, supports digestive health.
+
+**🫘 Dal Makhni** - $12.60
+Slow-simmered black lentils and kidney beans in rich, creamy tomato curry - a vegetarian masterpiece!
+
+**🥭 Mango Lassi** - $5.25
+Creamy yogurt drink blended with sweet mango - perfect vegetarian beverage!
+
+**Perfect for:** Vegetarian diets, protein-rich plant meals, or anyone looking for delicious meat-free options!"""
+        
+        # Check for specific dessert queries
+        if any(word in query.lower() for word in ['dessert', 'sweet', 'mithai', 'kheer', 'gulab', 'jalebi', 'halwa']):
+            return """🍰 **Sweet Endings:**
+
+**🥭 Mango Lassi** - $5.25
+Creamy yogurt drink blended with sweet mango - our Instagram star! Perfect dessert beverage.
+
+**🌸 Kashmiri Chai** - $4.20
+Pink tea from the Kashmir valley - delicate, aromatic, and Instagram-worthy. Sweet and refreshing.
+
+**🍯 Sweet Lassi** - $4.20
+Classic sweetened yogurt drink - natural dessert and digestive aid.
+
+**Perfect for:** Ending your meal on a sweet note, cooling down after spicy dishes, or as a refreshing dessert!"""
+        
+        # Check for specific bread/naan queries
+        if any(word in query.lower() for word in ['bread', 'naan', 'roti', 'paratha', 'kulcha']):
+            return """🍞 **Fresh Breads from Our Clay Oven:**
+
+**🧄 Garlic Naan** - $3.15
+Fresh garlic naan - essential for scooping up curries and creating the perfect bite.
+
+**🧈 Butter Naan** - $3.15
+Classic butter naan - soft, fluffy, and perfect for any curry.
+
+**🌿 Plain Naan** - $2.10
+Simple, fresh naan - your spice safety net and curry companion.
+
+**🥬 Paratha** - $3.15
+Layered flatbread - perfect for breakfast or as a hearty bread option.
+
+**Perfect for:** Scooping up curries, creating the perfect bite, or as a side to any dish!"""
+        
+        # Default dietary matching (existing logic)
+        matched_dishes = []
         for section in menu.values():
             for item in section.get('items', []):
                 item_text = (item.get('name','') + ' ' + item.get('description','')).lower()
@@ -523,6 +610,7 @@ What type of flavors usually excite your palate? I'd love to personalize this fu
                 # If any user tag matches item tags, include
                 if any(tag in item_tags for tag in tags):
                     matched_dishes.append(item)
+        
         if matched_dishes:
             reply = f"🍽️ **Here are some dishes matching your preferences ({', '.join(tags)}):**\n\n"
             for dish in matched_dishes:
@@ -530,12 +618,42 @@ What type of flavors usually excite your palate? I'd love to personalize this fu
             # Add weather/time/seasonal suggestion
             reply += f"\n{self.get_personalized_suggestion(tags, weather, time_of_day)}"
             return reply + "\nWould you like to refine your search (e.g., vegan, gluten-free, spicy, etc.)?"
+        
         # If ambiguous, ask for clarification
         if not tags:
             return ("Could you clarify what you're looking for? For example: vegetarian, vegan, gluten-free, spicy, mild, healthy, BBQ, dessert, drink, etc. "
                     "We offer a wide range of options and I'd love to recommend the perfect dishes for you!")
+        
         # Fallback
         return "I'm sorry, I couldn't find matching dishes. Could you specify your preference (e.g., vegan, spicy, gluten-free, etc.)?"
+
+    def get_current_weather(self) -> dict:
+        """Stub for weather awareness. Returns a simulated weather/season context for recommendations."""
+        # In production, integrate with a weather API. Here, return a plausible default.
+        now = datetime.datetime.now()
+        month = now.month
+        if month in [12, 1, 2]:
+            season = 'winter'
+            condition = 'cold'
+        elif month in [6, 7, 8]:
+            season = 'summer'
+            condition = 'hot'
+        else:
+            season = 'spring' if month in [3, 4, 5] else 'fall'
+            condition = 'mild'
+        return {'season': season, 'condition': condition}
+
+    def get_time_of_day(self) -> str:
+        """Stub for time-of-day awareness. Returns breakfast, lunch, dinner, or late night."""
+        now = datetime.datetime.now().hour
+        if 5 <= now < 11:
+            return 'breakfast'
+        elif 11 <= now < 16:
+            return 'lunch'
+        elif 16 <= now < 22:
+            return 'dinner'
+        else:
+            return 'late night'
 
     def get_personalized_suggestion(self, tags, weather, time_of_day):
         """Return a personalized suggestion string based on tags, weather, and time of day."""

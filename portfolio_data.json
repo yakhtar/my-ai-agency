@@ -1,0 +1,269 @@
+{
+  "generated_at": "2025-07-17T02:20:11.622975",
+  "server_info": {
+    "name": "github_portfolio",
+    "version": "1.0.0",
+    "description": "GitHub portfolio management for AI agency",
+    "author": "Yasser Akhtar - AI Agency",
+    "capabilities": [
+      "repository_management",
+      "project_documentation",
+      "client_showcase",
+      "portfolio_analytics",
+      "professional_presentation"
+    ]
+  },
+  "portfolio_summary": {
+    "consultant_name": "Yasser Akhtar",
+    "title": "AI Agency Consultant & Digital Analytics Specialist",
+    "experience": "15+ years in conversion optimization and A/B testing",
+    "specialization": "Enterprise-level AI solutions for SMBs",
+    "total_projects": 3,
+    "projects": [
+      {
+        "name": "Zaika Restaurant AI Agent",
+        "type": "ai_agent",
+        "description": "Intelligent customer service agent for Pakistani restaurant",
+        "technologies": [
+          "Python",
+          "Claude",
+          "JSON",
+          "NLP"
+        ],
+        "business_impact": "Improved customer engagement and order conversion",
+        "github_url": "https://github.com/yakhtar/zaika-ai-agent",
+        "key_features": [
+          "Intent recognition system",
+          "Multilingual support",
+          "Menu recommendations",
+          "Customer analytics"
+        ]
+      },
+      {
+        "name": "Restaurant Analytics MCP Server",
+        "type": "mcp_server",
+        "description": "Custom MCP server for restaurant business analytics",
+        "technologies": [
+          "Python",
+          "MCP",
+          "Data Analysis"
+        ],
+        "business_impact": "Automated business insights and recommendations",
+        "github_url": "https://github.com/yakhtar/restaurant-analytics-mcp",
+        "key_features": [
+          "Customer intent analysis",
+          "Performance metrics",
+          "Business recommendations",
+          "Data export capabilities"
+        ]
+      },
+      {
+        "name": "GitHub Portfolio Manager",
+        "type": "mcp_server",
+        "description": "MCP server for managing AI agency portfolio",
+        "technologies": [
+          "Python",
+          "GitHub API",
+          "Portfolio Management"
+        ],
+        "business_impact": "Professional client showcase and credibility building",
+        "github_url": "https://github.com/yakhtar/github-portfolio-mcp",
+        "key_features": [
+          "Project structure generation",
+          "Portfolio analytics",
+          "Client showcase templates",
+          "Professional documentation"
+        ]
+      }
+    ],
+    "key_achievements": [
+      "58.8% conversion lift on mobile CTAs at Fifth Third Bank",
+      "17+ A/B tests with measurable business impact",
+      "SFMC Email Specialist certified",
+      "Custom MCP server development for Claude Code"
+    ],
+    "service_categories": [
+      "AI Agent Development",
+      "Marketing Automation",
+      "Conversion Optimization",
+      "Business Analytics",
+      "MCP Server Development"
+    ],
+    "github_profile": "https://github.com/yakhtar",
+    "portfolio_updated": "2025-07-17T02:20:11.622975"
+  },
+  "professional_profile": {
+    "profile_title": "AI Agency Consultant & Digital Analytics Specialist",
+    "tagline": "Transforming SMBs with Enterprise-Level AI Solutions",
+    "bio": "\n🚀 AI Agency Consultant specializing in custom automation solutions for small and medium businesses\n\n📊 15+ years experience in digital analytics and conversion optimization\n🎯 Achieved 58.8% conversion lifts through data-driven A/B testing\n🔧 Custom MCP server development for Claude Code\n📈 SFMC Email Specialist certified\n\n**Current Focus**: Building AI agents that deliver measurable business results\n**Mission**: Bringing enterprise-level AI capabilities to SMBs at accessible costs\n",
+    "skills": [
+      "AI Agent Development",
+      "Claude Code & MCP Servers",
+      "Conversion Optimization",
+      "A/B Testing",
+      "Marketing Automation",
+      "Data Analytics",
+      "Python Development",
+      "Business Intelligence"
+    ],
+    "experience_highlights": [
+      "Senior Digital Analytics role at Fifth Third Bank",
+      "Led 17+ A/B tests with measurable business impact",
+      "Developed custom AI solutions for restaurants, law firms, and clinics",
+      "Built MCP servers for specialized business analytics"
+    ],
+    "service_offerings": [
+      "Custom AI Agent Development",
+      "Marketing Automation Setup",
+      "Conversion Rate Optimization",
+      "Business Process Automation",
+      "Data Analytics & Insights"
+    ],
+    "technologies": [
+      "Python",
+      "Claude Code",
+      "MCP Protocol",
+      "JSON",
+      "SQLite",
+      "Adobe Analytics",
+      "Salesforce Marketing Cloud",
+      "HTML/CSS"
+    ]
+  },
+  "website_content": {
+    "homepage": {
+      "hero_section": {
+        "title": "AI Solutions That Drive Real Business Results",
+        "subtitle": "15+ Years of Analytics Expertise + Cutting-Edge AI = Your Competitive Advantage",
+        "cta": "Get Your Free AI Strategy Consultation"
+      },
+      "services": [
+        {
+          "title": "AI Agent Development",
+          "description": "Custom AI agents that automate customer interactions and drive conversions",
+          "example": "Restaurant ordering system with 35% increase in average order value"
+        },
+        {
+          "title": "Marketing Automation",
+          "description": "SFMC-powered automation that nurtures leads and maximizes customer lifetime value",
+          "example": "Email campaigns achieving 58.8% conversion lift"
+        },
+        {
+          "title": "Conversion Optimization",
+          "description": "Data-driven A/B testing and optimization based on enterprise-level experience",
+          "example": "17+ successful tests with measurable business impact"
+        }
+      ]
+    },
+    "case_studies": [
+      {
+        "title": "Zaika Restaurant: AI Customer Service Agent",
+        "challenge": "Manual customer service limiting growth",
+        "solution": "Custom AI agent with intent recognition and menu recommendations",
+        "results": "24/7 customer support, improved order accuracy, customer satisfaction boost"
+      },
+      {
+        "title": "Restaurant Analytics: Business Intelligence MCP",
+        "challenge": "No actionable insights from customer data",
+        "solution": "Custom MCP server providing real-time business analytics",
+        "results": "Data-driven menu optimization, customer behavior insights, revenue growth"
+      }
+    ],
+    "about": {
+      "story": "From Fortune 500 analytics to SMB AI solutions",
+      "mission": "Democratizing enterprise-level AI for small businesses",
+      "approach": "Combining proven analytics methodologies with cutting-edge AI"
+    }
+  },
+  "sample_projects": [
+    {
+      "project_name": "zaika-ai-agent",
+      "project_type": "ai_agent",
+      "description": "AI Agent for business automation",
+      "structure": {
+        "README.md": "# zaika-ai-agent\n\n## Overview\nAI Agent developed by Yasser Akhtar for business automation and customer engagement.\n\n## Features\n- ✅ Intelligent customer interaction\n- ✅ Business data analysis\n- ✅ Automated responses\n- ✅ Performance analytics\n- ✅ Easy integration\n\n## Installation\n```bash\npip install -r requirements.txt\npython src/agent.py\n```\n\n## Usage\n```python\nfrom src.agent import Agent\n\nagent = Agent()\nresponse = agent.process_query(\"Your question here\")\nprint(response)\n```\n\n## Configuration\nSee `docs/setup.md` for detailed configuration options.\n\n## Results\n- 📊 Customer satisfaction improved by XX%\n- 🚀 Response time reduced by XX%\n- 💰 Cost savings of $XX per month\n\n## About\nBuilt by [Yasser Akhtar](https://github.com/yakhtar) - Digital Analytics Specialist & AI Consultant\n\n**Experience**: 15+ years in conversion optimization and A/B testing\n**Specialization**: Enterprise-level AI solutions for SMBs\n\n**Contact**: \n- 📧 Email: [your-email]\n- 💼 LinkedIn: [your-linkedin]\n- 🔗 Portfolio: [your-portfolio-site]\n\n## License\nMIT License - See LICENSE file for details\n",
+        "src/": {
+          "agent.py": "# Main agent implementation",
+          "config.py": "# Configuration settings",
+          "utils.py": "# Utility functions"
+        },
+        "tests/": {
+          "test_agent.py": "# Agent tests",
+          "test_data/": "# Test data files"
+        },
+        "docs/": {
+          "setup.md": "# Setup Instructions",
+          "usage.md": "# Usage Guide",
+          "api.md": "# API Documentation"
+        },
+        "examples/": {
+          "demo.py": "# Demo script",
+          "sample_data.json": "# Sample data"
+        }
+      },
+      "files_to_create": [
+        "README.md",
+        "src/agent.py",
+        "src/config.py",
+        "tests/test_agent.py",
+        "docs/setup.md",
+        "examples/demo.py"
+      ]
+    },
+    {
+      "project_name": "restaurant-analytics-mcp",
+      "project_type": "mcp_server",
+      "description": "Custom MCP Server for Claude Code",
+      "structure": {
+        "README.md": "# restaurant-analytics-mcp MCP Server\n\n## Overview\nCustom MCP (Model Context Protocol) server for Claude Code integration.\n\n## Features\n- 🔧 Custom tool integration\n- 📊 Data processing capabilities\n- 🔄 Real-time analytics\n- 🎯 Business-focused functionality\n\n## Installation\n```bash\npip install -r requirements.txt\npython server.py\n```\n\n## Configuration\n```json\n{\n  \"server_name\": \"restaurant-analytics-mcp\",\n  \"port\": 8080,\n  \"capabilities\": [\"data_analysis\", \"business_insights\"]\n}\n```\n\n## API Reference\nSee `docs/api_reference.md` for complete API documentation.\n\n## Integration with Claude Code\nThis MCP server extends Claude Code with specialized business tools.\n\n## Author\n**Yasser Akhtar** - AI Agency Consultant\n- 15+ years experience in digital analytics\n- Conversion optimization expert (58.8% lift achievements)\n- Enterprise-level A/B testing background\n- SFMC Email Specialist certified\n\n**Portfolio**: https://github.com/yakhtar\n",
+        "server.py": "# MCP Server implementation",
+        "config.json": "# Configuration file",
+        "tests/": {
+          "test_server.py": "# Server tests"
+        },
+        "docs/": {
+          "installation.md": "# Installation Guide",
+          "api_reference.md": "# API Reference"
+        }
+      },
+      "files_to_create": [
+        "README.md",
+        "server.py",
+        "config.json",
+        "tests/test_server.py",
+        "docs/installation.md"
+      ]
+    },
+    {
+      "project_name": "law-firm-automation",
+      "project_type": "client_solution",
+      "description": "Complete client solution package",
+      "structure": {
+        "README.md": "# law-firm-automation - Client Solution\n\n## Executive Summary\nComplete AI automation solution delivered by Yasser Akhtar AI Agency.\n\n## Problem Statement\n[Client's business challenge and current pain points]\n\n## Solution Overview\nCustom AI agent that:\n- ✅ Automates customer interactions\n- ✅ Provides 24/7 support\n- ✅ Generates business insights\n- ✅ Improves conversion rates\n\n## Implementation\n- **Timeline**: X weeks\n- **Technology Stack**: Python, Claude Code, Custom MCP\n- **Integration**: Seamless with existing systems\n\n## Results Achieved\n- 📈 Conversion rate improved by XX%\n- ⏱️ Response time reduced by XX%\n- 💰 Monthly savings: $XX\n- 😊 Customer satisfaction: XX%\n\n## Deployment\nSee `deployment/setup.md` for complete deployment instructions.\n\n## Maintenance & Support\n- 🔄 Regular updates and monitoring\n- 📞 Direct support from Yasser Akhtar\n- 📊 Monthly performance reports\n\n## About Yasser Akhtar AI Agency\nSpecializing in enterprise-level AI solutions for small and medium businesses.\n\n**Expertise**:\n- 15+ years digital analytics experience\n- Conversion optimization (58.8% lift achievements)\n- A/B testing and performance optimization\n- Marketing automation (SFMC certified)\n- Custom MCP server development\n\n**Contact Information**:\n- 📧 Email: [contact-email]\n- 💼 LinkedIn: [linkedin-profile]\n- 🔗 Portfolio: https://github.com/yakhtar\n",
+        "solution/": {
+          "main.py": "# Main solution code",
+          "components/": "# Solution components"
+        },
+        "client_brief/": {
+          "requirements.md": "# Client Requirements",
+          "solution_overview.md": "# Solution Overview"
+        },
+        "deployment/": {
+          "setup.md": "# Deployment Guide",
+          "config.yaml": "# Configuration"
+        },
+        "results/": {
+          "metrics.md": "# Performance Metrics",
+          "screenshots/": "# Solution screenshots"
+        }
+      },
+      "files_to_create": [
+        "README.md",
+        "solution/main.py",
+        "client_brief/requirements.md",
+        "deployment/setup.md",
+        "results/metrics.md"
+      ]
+    }
+  ]
+}
